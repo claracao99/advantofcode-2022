@@ -5,6 +5,8 @@ with open("input-day-4.txt", "r") as f:
 counter = 0
 for i in lines:
     pair = i.strip("\n")
+    val = pair[::2]
+    print(val)
     a = int(pair.split(",")[0].split("-")[0])
     b = int(pair.split(",")[0].split("-")[1])
     c = int(pair.split(",")[1].split("-")[0])
