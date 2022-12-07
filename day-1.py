@@ -49,7 +49,7 @@ Find the Elf carrying the most Calories. How many total Calories is that Elf car
 
 """
 
-with open("day-1.txt") as f:
+with open("input-day-1.txt") as f:
     lines = f.readlines()
 
 lines.append("\n")
@@ -64,5 +64,8 @@ for i in lines:
         counter += cal
         # print(counter)
 
-pos = sum_cals.index(max(sum_cals))
-print(f"the elf with the most calories is in position {pos+1}, he is carrying {max(sum_cals)} calories.")
+sorted_cals = sorted(sum_cals, reverse=True)
+print(sorted_cals[0:3])
+max_three = sum(sorted_cals[0:3])
+print(max_three)
+# print(f"the elf with the most calories is in position {pos+1}, he is carrying {max(sum_cals)} calories.")
